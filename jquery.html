@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>React.js Performance Tests</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>React.js Performance Tests</i></h1>
+      <br>
+      <ul class="nav nav-pills">
+        <li role="presentation"><a href="react.html">React</a></li>
+        <li role="presentation" class="active"><a href="jquery.html">jQuery</a></li>
+        <li role="presentation"><a href="angular.html">Angular</a></li>
+      </ul>
+      <br>
+      <div class="row">
+        <div class="col-sm-9">
+          <div id="dashboard"></div>
+        </div>
+        <div class="col-sm-3">
+          <div class="form-group">
+            <label for="total-input">Total: </label>
+            <input type="text" class="form-control init" id="total-input" value="10000">
+          </div>
+          <div class="form-group">
+            <label for="change-input">Change: </label>
+            <input type="text" class="form-control init" id="change-input" value="2000">
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" id="update-btn">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/jquery/dashboard.js"></script>
+    <script>
+
+      function initialize() {
+
+        factory.init({
+          maxCount: $('#total-input').val(),
+          changeCount: $('#change-input').val()
+        });
+
+        $('#dashboard').dashboard({ factory: factory });
+      }
+
+      function update() {
+        $('#dashboard').dashboard('update');
+      }
+
+      $(function () {
+        initialize();
+        $('input.init').on('change', initialize);
+        $('#update-btn').on('click', update);
+      });
+    </script>
+  </body>
+</html>
