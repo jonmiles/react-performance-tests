@@ -1,0 +1,43 @@
+{
+  "name": "react-performance-tests",
+  "description": "React.js, jQuery and Angular.js rendering performance tests",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jonmiles/react-performance-tests",
+  "author": {
+    "name": "Jonathan Miles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonmiles/react-performance-tests.git"
+  },
+  "main": [],
+  "scripts": {
+    "install": "bower install",
+    "start": "node app"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "dependencies": {
+    "express": "3.4.4"
+  },
+  "devDependencies": {
+    "bower": "1.3.x",
+    "grunt": "0.4.x",
+    "grunt-react": "~0.12.0",
+    "grunt-contrib-watch": "~0.6.1"
+  },
+  "keywords": [
+    "javascript",
+    "react",
+    "react.js",
+    "react-component",
+    "jQuery",
+    "angular",
+    "angular.js",
+    "rendering",
+    "performance",
+    "tests",
+    "performance tests"
+  ]
+}

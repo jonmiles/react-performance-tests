@@ -1,0 +1,34 @@
+{
+  "name": "react-performance-tests",
+  "description": "React.js, jQuery and Angular.js rendering performance tests",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jonmiles/react-performance-tests",
+  "main": [],
+  "keywords": [
+    "javascript",
+    "react",
+    "react.js",
+    "react-component",
+    "jQuery",
+    "angular",
+    "angular.js",
+    "rendering",
+    "performance",
+    "tests",
+    "performance tests"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": ">= 3.0.0",
+    "react": "~0.13.1",
+    "jquery": "~2.1.3",
+    "angular": "~1.3.15"
+  },
+  "devDependencies": {}
+}
