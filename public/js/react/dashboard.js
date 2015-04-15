@@ -7,7 +7,9 @@ var DashboardItem = React.createClass({displayName: "DashboardItem",
 		};
 
 		return (
-			React.createElement("div", {className: "item", style: style})
+			React.createElement("div", {className: "item", style: style}, 
+				React.createElement("label", null, this.props.val, "%")
+			)
 		);
 	}
 });
@@ -32,7 +34,7 @@ var Dashboard = React.createClass({displayName: "Dashboard",
 		return (
 			React.createElement("div", null, 
 				items.map(function (d) {
-					return React.createElement(DashboardItem, {color: d})
+					return React.createElement(DashboardItem, {color: d.color, val: d.val})
 				})
 			)
 		);
