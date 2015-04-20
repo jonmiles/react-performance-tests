@@ -2,8 +2,6 @@
 
 The main objective was to test React.js’ relative performance of rendering browser updates against comparable frameworks, or approaches.  
 
-A secondary objective was whether I should replace jQuery plugin’s as my chosen method of implementing modular, reusable web UI components.
-
 
 ## Framework Selection
 
@@ -25,12 +23,12 @@ The test scenario was purposely kept as simple as possible, in order that the im
 
 I wanted to make the test scenario as real world as possible, the test’s had to be a practical application.  
 
-Over the past 10+ years I’ve been involved in varying degrees in the development of real-time service dashboards, which typically involves a lot of high frequency DOM manipulation.  Based on this experience, I decided the test scenario would be a dashboard which displayed a value and associated colour.  The implementation would be simply but would be designed to stress test the respective frameworks.
+Over the past 10+ years I’ve been involved in the development of real-time dashboards, which typically involves a lot of high frequency page  updates.  It was based on this experience that I decided the test scenario would be dashboard related.  The implementation would be simply but would be designed to stress test the respective frameworks.
 
 
 ## Implementation
 
-A grid of elements, each responsible for displaying two things 1. a percent value between 0 and 100%, 2. a colour associated with this value.   The colour would be calculated at the same time as the data is populated, with 100 being green, 1-99 as a gradual shade of amber (actually, yellow through to dark orange) and 0 would be red.
+A very basic dashboard, a grid of elements which update themselves based on state related data.  Each element would be responsible for displaying two things 1. a percentage value between 0 and 100, 2. a colour associated with this value.  The colour would be calculated at the same time as the data is populated, with 100 being green, 1-99 as a gradual shade of amber (actually, yellow through to dark orange) and 0 would be red.
 
 The data would be generated independently of the dashboard implementation and each implementation would make the same data request.  There should be no advantage gained by either implementation.  In order to test different scenarios, I made the size of the grid and the number of changes configurable via the test interface.
 
