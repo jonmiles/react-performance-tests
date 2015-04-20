@@ -28,7 +28,7 @@ Over the past 10+ years I’ve been involved in the development of real-time das
 
 ## Implementation
 
-A very basic dashboard, a grid of elements which update themselves based on state related data.  Each element would be responsible for displaying two things 1. a percentage value between 0 and 100, 2. a colour associated with this value.  The colour would be calculated at the same time as the data is populated, with 100 being green, 1-99 as a gradual shade of amber (actually, yellow through to dark orange) and 0 would be red.
+A very basic dashboard, a grid of elements which update themselves based on state related data.  Each element would be responsible for displaying two things 1. a percentage value between 0 and 100, 2. a colour associated with this value.  Both data values would be provided by the data generated, all the dashboard has to do is represent these values visually.
 
 The data would be generated independently of the dashboard implementation and each implementation would make the same data request.  There should be no advantage gained by either implementation.  In order to test different scenarios, I made the size of the grid and the number of changes configurable via the test interface.
 
