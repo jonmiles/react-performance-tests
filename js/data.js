@@ -5,18 +5,26 @@ var factory = (function () {
 	var data = [];
 
 	function init(optionsIn) {
+
 		options = optionsIn;
+		
 		this.data = [];
+
 		for (i = 0; i < options.maxCount; i++) {
-			this.data[i] = getStateColor(Math.round(Math.random() * 100));
+			var stateNum = Math.round(Math.random() * 100);
+			this.data[i] = { val: stateNum, color: getStateColor(stateNum) };
 		}
+
 		return this;
 	}
 
 	function update() {
+		
 		for (i = 0; i < options.changeCount; i++) {
-			this.data[Math.round(Math.random() * options.maxCount)] = getStateColor(Math.round(Math.random() * 100));
+			var stateNum = Math.round(Math.random() * 100);
+			this.data[Math.round(Math.random() * options.maxCount)] = { val: stateNum, color: getStateColor(stateNum) };
 		}
+
 		return this;
 	}
 

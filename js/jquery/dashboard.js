@@ -36,7 +36,10 @@
 
 		var $wrapper = $('<div></div>');
 		for (i = 0; i < data.length; i++) {
-			$wrapper.append('<div class="item" style="background-color:' + data[i] + ';"></div>');
+			$wrapper
+				.append($('<div class="item" style="background-color:' + data[i].color + ';"></div>')
+					.append('<label>' + data[i].val + '%</label>')
+				);
 		}
 		this.$element.empty().append($wrapper);
 	};

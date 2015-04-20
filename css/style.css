@@ -4,9 +4,12 @@
 }
 
 #dashboard .item {
-	width: 5px;
-	height: 5px;
-	float: left;
+	display: inline-block;
+}
+
+#dashboard .item label {
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 #progress-out {
