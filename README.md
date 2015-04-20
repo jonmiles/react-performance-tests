@@ -32,14 +32,14 @@ Over the past 10+ years I’ve been involved in varying degrees in the developme
 
 A grid of elements, each responsible for displaying two things 1. a percent value between 0 and 100%, 2. a colour associated with this value.   The colour would be calculated at the same time as the data is populated, with 100 being green, 1-99 as a gradual shade of amber (actually, yellow through to dark orange) and 0 would be red.
 
-The data would be generated independantly of the dashboard implementation and each implementation would make the same data request.  There should be no advantage gained by either implementation.  In order to test different scenarios, I made the size of the grid and the number of changes configurable via the test interface.
+The data would be generated independently of the dashboard implementation and each implementation would make the same data request.  There should be no advantage gained by either implementation.  In order to test different scenarios, I made the size of the grid and the number of changes configurable via the test interface.
 
 You can view the code implementation in this project, and a live demo is available to view [here](http://jonmiles.github.io/react-performance-tests).
 
 
 ## Results
 
-The below sample test results where generated based on a total of 10,000 dashboard elements, with a random 20% of those elements being updated on each update request.
+The below sample test results were generated based on a total of 10,000 dashboard elements, with a random 20% of those elements being updated on each update request.
 
 **React.js**  
 
@@ -65,6 +65,6 @@ Again this is only a sample, please feel free to test it yourself using the [liv
 
 ## Conclusion
 
-React.js certainy faster the jQuery and direct DOM manipulation approach, in fact nearly twice as fast.  In a way that was to be expected, as jQuery has no fancy update implementation (e.g. Shadow DOM +diff) and literally rebuilds the entire grid on each render.
+React was certainly faster the jQuery and direct DOM manipulation approach, in fact nearly twice as fast.  In a way that was to be expected, as jQuery has no fancy update implementation (e.g. Shadow DOM +diff) and literally rebuilds the entire grid on each render.
 
-What I wasn't necessarily expecting was that Angular.js would be at least as fast, or faster (in the sample results above).  Yet over many test, over many days, the results were always the same with no noticable difference between React and Angular in terms of time taken to render updates.
+What I wasn't necessarily expecting was that Angular.js would be at least as fast, or faster (in the sample results above).  Yet over many test, over many days, the results were always the same with no noticeable difference between React and Angular in terms of time taken to render updates.
