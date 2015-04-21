@@ -47,7 +47,7 @@ Tests where run using Chrome and the Developer Tools Timeline.
 Tests where run 5 times against each approach to provide an average and to allow for any data anomalies.
 
 
-**React.js**
+### React.js
 
 | #  | Rendering | Painting | Results |
 | --- | ----- | ------ | ------------ |
@@ -59,7 +59,7 @@ Tests where run 5 times against each approach to provide an average and to allow
 | **Avg** | **152ms**  | **193ms**  |   |
 
 
-**jQuery**
+### jQuery
 
 | #  | Rendering | Painting | Results |
 | --- | ----- | ------ | ------------ |
@@ -71,7 +71,7 @@ Tests where run 5 times against each approach to provide an average and to allow
 | **Avg** | **354ms**  | **188ms**  |   |
 
 
-**Angular.js**
+### Angular.js
 
 | #  | Rendering | Painting | Results |
 | --- | ----- | ------ | ------------ |
