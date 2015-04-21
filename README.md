@@ -90,6 +90,6 @@ These results are only a small test sample with fix parameters.  I did run separ
 
 React was certainly faster the jQuery approach, in fact on average more than twice as fast.  In a way that was to be expected, as jQuery has no fancy update implementation (e.g. Shadow DOM) and literally rebuilds the entire grid on each render.  That said, if we're only updating 20% of the rendered elements then logically I would have expected it to be more like 5 times faster.
 
-On the other hand React's performance was much more comparable with Angular.  No major surprise as they both claim to take a Shadow DOM approach to rendering updates.  The results above show that React has a clear, albeit marginal advantage.  However that wasn't always the case, in most instances Angular was almost as fast, in some instances Angular was actually faster but never by much.
+On the other hand React's performance was much more comparable with Angular.  No major surprise as they both claim to take a Shadow DOM approach to rendering updates.  The results above show that React has a clear, albeit marginal advantage.  However that wasn't always the case during my testing, in most instances Angular was almost as fast, in some instances Angular was actually faster but never by much.
 
 As a side note on reliability, on several occasions during testing the jQuery approach actually crashed the browser.  Typically this was when dealing with very large data sets, 10,000 total elements and over.  This was not something I experienced while testing React or Angular.
