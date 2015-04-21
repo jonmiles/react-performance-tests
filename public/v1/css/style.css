@@ -1,0 +1,15 @@
+#dashboard {
+	padding-bottom: 50px;
+	display: inline-block;
+}
+
+#dashboard .item {
+	width: 5px;
+	height: 5px;
+	float: left;
+}
+
+#progress-out {
+	margin-top: 50px;
+	font-size: 4rem;
+}

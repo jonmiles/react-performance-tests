@@ -14,8 +14,8 @@
             <li role="presentation"><a href="react.html">React</a></li>
             <li role="presentation"><a href="jquery.html">jQuery</a></li>
             <li role="presentation" class="active"><a href="angular.html">Angular</a></li>
-            <li role="presentation" class="pull-right"><a href="./v1/angular.html">v1</a></li>
-            <li role="presentation" class="pull-right active"><a href="./v2/angular.html">v2</a></li>
+            <li role="presentation" class="pull-right active"><a href="../angular.html">v1</a></li>
+            <li role="presentation" class="pull-right"><a href="../angular.html">v2</a></li>
           </ul>
         </div>
       </div>
@@ -24,10 +24,9 @@
         <div class="col-sm-9">
           <div id="dashboard" ng-app="dashboardApp" ng-controller="DashboardCtrl">
             <div class="item" 
-                ng-repeat="item in items track by $index"
-                ng-style="{ 'backgroundColor' : item.color }"
+              ng-repeat="item in items track by $index"
+              ng-style="{ 'backgroundColor' : item }"
               >
-                <label>{{ item.val }}%</label>
             </div>
           </div>
         </div>

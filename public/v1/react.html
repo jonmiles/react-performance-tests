@@ -11,25 +11,18 @@
       <div class="row">
         <div class="col-sm-9">
           <ul class="nav nav-pills">
-            <li role="presentation"><a href="react.html">React</a></li>
+            <li role="presentation" class="active"><a href="react.html">React</a></li>
             <li role="presentation"><a href="jquery.html">jQuery</a></li>
-            <li role="presentation" class="active"><a href="angular.html">Angular</a></li>
-            <li role="presentation" class="pull-right"><a href="./v1/angular.html">v1</a></li>
-            <li role="presentation" class="pull-right active"><a href="./v2/angular.html">v2</a></li>
+            <li role="presentation"><a href="angular.html">Angular</a></li>
+            <li role="presentation" class="pull-right active"><a href="../react.html">v1</a></li>
+            <li role="presentation" class="pull-right"><a href="../react.html">v2</a></li>
           </ul>
         </div>
       </div>
       <br>
       <div class="row">
         <div class="col-sm-9">
-          <div id="dashboard" ng-app="dashboardApp" ng-controller="DashboardCtrl">
-            <div class="item" 
-                ng-repeat="item in items track by $index"
-                ng-style="{ 'backgroundColor' : item.color }"
-              >
-                <label>{{ item.val }}%</label>
-            </div>
-          </div>
+          <div id="dashboard"></div>
         </div>
         <div class="col-sm-3">
           <div class="form-group">
@@ -47,12 +40,12 @@
       </div>
     </div>
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/react/react.min.js"></script>
     <script src="./js/data.js"></script>
-    <script src="./js/angular/dashboard.js"></script>
+    <script src="./js/react/dashboard.js"></script>
     <script>
 
-      var scope;
+      var comp;
 
       function initialize() {
 
@@ -61,12 +54,14 @@
           changeCount: $('#change-input').val()
         });
 
-        scope = angular.element($('#dashboard')).scope();
-        scope.initialize({ factory: factory });
+        comp = React.render(
+            React.createElement(Dashboard, { factory: factory }),
+              document.getElementById('dashboard')
+          );
       }
 
       function update() {
-        scope.update();
+        comp.update();
       }
 
       $(function () {
