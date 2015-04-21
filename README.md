@@ -13,7 +13,7 @@ Live Demo - [http://jonmiles.github.io/react-performance-tests](http://jonmiles.
 
 **jQuery** was the next obvious choice, as I have a lot of experience developing web components using jQuery and direct DOM manipulation.
 
-Finally, I wanted to ensure I compared React against another modern framework.  My decision to choose **Angular.js** was straight forward, from my experience it’s one of the most populate frameworks around; quickly confirmed by its popularity on [GitHub](https://github.com/showcases/front-end-javascript-frameworks).
+Finally, I wanted to ensure I compared React against another modern framework.  My decision to choose **Angular.js** was straight forward, from my experience it’s one of the most popular frameworks around; quickly confirmed by its popularity on [GitHub](https://github.com/showcases/front-end-javascript-frameworks).
 
 
 ## Considerations
